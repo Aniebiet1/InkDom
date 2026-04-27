@@ -2,9 +2,9 @@ import { Star } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const items = [
-  { initials: "AK", name: "Ama Kente",     role: "Reader · Lagos",  text: "InkDom feels like sitting in my grandmother's living room — every story warms a different corner of my heart." },
-  { initials: "MO", name: "Musa Otieno",   role: "Writer · Nairobi","text: "I've found a community here that not only reads my work, but champions it. My voice has never felt more heard.".replace('text: "','') },
-  { initials: "ZS", name: "Zara Sankoh",   role: "Reader · Dakar",  text: "Finally, a place where African storytelling is the centrepiece, not the side dish. I read here every single night." },
+  { initials: "AK", name: "Ama Kente",   role: "Reader · Lagos",   text: "InkDom feels like sitting in my grandmother's living room — every story warms a different corner of my heart." },
+  { initials: "MO", name: "Musa Otieno", role: "Writer · Nairobi", text: "I've found a community here that not only reads my work, but champions it. My voice has never felt more heard." },
+  { initials: "ZS", name: "Zara Sankoh", role: "Reader · Dakar",   text: "Finally, a place where African storytelling is the centrepiece, not the side dish. I read here every single night." },
 ];
 
 export const Testimonials = () => (

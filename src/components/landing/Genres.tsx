@@ -55,7 +55,7 @@ export const Genres = () => (
         })}
       </div>
     </div>
-    {/* fade into emerald */}
-    <div className="pointer-events-none absolute -bottom-px left-0 right-0 h-32 bg-fade-down" />
+    {/* subtle fade into emerald */}
+    <div className="pointer-events-none absolute -bottom-px left-0 right-0 h-12 bg-fade-down opacity-60" />
   </section>
 );

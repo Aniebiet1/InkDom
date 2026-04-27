@@ -1,4 +1,4 @@
-import { Compass, BookOpen, Users, PenLine, Menu, X } from "lucide-react";
+import { Compass, BookOpen, Users, Menu, X, LogIn } from "lucide-react";
 import { useState } from "react";
 import { Logo } from "./Logo";
 
@@ -20,8 +20,11 @@ export const Navbar = () => {
               <Icon className="h-4 w-4" /> {label}
             </a>
           ))}
-          <button className="flex items-center gap-1.5 rounded-full bg-leaf text-leaf-foreground px-4 py-2 text-sm font-medium hover:brightness-110 transition">
-            <PenLine className="h-4 w-4" /> Write
+          <a href="#" className="flex items-center gap-1.5 hover:text-gold transition-colors">
+            <LogIn className="h-4 w-4" /> Login
+          </a>
+          <button className="rounded-full bg-leaf text-leaf-foreground px-4 py-2 text-sm font-medium hover:brightness-110 transition">
+            Sign Up
           </button>
         </nav>
         <button
@@ -40,8 +43,11 @@ export const Navbar = () => {
                 <Icon className="h-4 w-4 text-gold" /> {label}
               </a>
             ))}
+            <a href="#" className="flex items-center gap-2 py-2 text-foreground/90">
+              <LogIn className="h-4 w-4 text-gold" /> Login
+            </a>
             <button className="mt-1 flex items-center justify-center gap-2 rounded-full bg-leaf text-leaf-foreground py-2.5 font-medium">
-              <PenLine className="h-4 w-4" /> Write
+              Sign Up
             </button>
           </div>
         </div>

@@ -13,7 +13,7 @@ const writers = [
 ];
 
 export const Writers = () => (
-  <section className="bg-cream text-cream-foreground py-24 md:py-28 relative">
+  <section id="writers" className="bg-cream text-cream-foreground py-24 md:py-28 relative scroll-mt-20">
     <div className="container">
       <div className="flex items-end justify-between gap-6 mb-10">
         <Reveal>

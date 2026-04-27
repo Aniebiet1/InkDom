@@ -11,7 +11,7 @@ const genres = [
 ];
 
 export const Genres = () => (
-  <section className="bg-cream text-cream-foreground pb-24 md:pb-32 relative">
+  <section id="genres" className="bg-cream text-cream-foreground pb-24 md:pb-32 relative scroll-mt-20">
     {/* decorative ornament */}
     <div className="container">
       <Reveal>

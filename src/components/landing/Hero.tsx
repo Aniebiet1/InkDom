@@ -1,7 +1,6 @@
 import { Play, BookOpen, PenLine, Users, ArrowDown, Quote } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-fire-book.jpg";
-import { Reveal } from "./Reveal";
 
 export const Hero = () => {
   return (

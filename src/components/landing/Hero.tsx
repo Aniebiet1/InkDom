@@ -11,42 +11,32 @@ export const Hero = () => {
       <div className="container relative grid md:grid-cols-2 gap-10 md:gap-12 items-center">
         {/* Left */}
         <div>
-          <Reveal>
-            <div className="flex items-center gap-3 text-gold mb-5">
+          <div className="flex items-center gap-3 text-gold mb-5 animate-slide-up-in" style={{ animationDelay: "0.05s" }}>
               <span className="h-px w-8 bg-gold/50" />
               <span className="eyebrow">Chapter One · Est. 2024</span>
               <span className="h-px w-8 bg-gold/50" />
-            </div>
-          </Reveal>
-          <Reveal delay={0.05}>
-            <h1 className="display text-5xl sm:text-6xl md:text-7xl leading-[1.02] text-foreground">
-              Where Words<br />
-              <span className="italic text-gold-soft">Collide</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="mt-5 max-w-md text-foreground/70 leading-relaxed">
+          </div>
+          <h1 className="display text-5xl sm:text-6xl md:text-7xl leading-[1.02] text-foreground animate-slide-up-in" style={{ animationDelay: "0.25s" }}>
+            Where <span className="text-gold">Words</span><br />
+            <span className="italic text-gold-soft">Collide</span>
+          </h1>
+          <p className="mt-5 max-w-md text-foreground/70 leading-relaxed animate-slide-up-in" style={{ animationDelay: "0.5s" }}>
               Discover powerful, culturally rich stories crafted by African voices —
               fiction too vivid to forget.
-            </p>
-          </Reveal>
-          <Reveal delay={0.18}>
-            <div className="mt-7 flex flex-wrap gap-3">
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3 animate-slide-up-in" style={{ animationDelay: "0.7s" }}>
               <button className="inline-flex items-center gap-2 rounded-full bg-leaf text-leaf-foreground px-5 py-3 text-sm font-medium shadow-soft hover:brightness-110 transition">
                 <BookOpen className="h-4 w-4" /> Start Reading Free
               </button>
               <button className="inline-flex items-center gap-2 rounded-full border border-gold/40 text-foreground px-5 py-3 text-sm font-medium hover:bg-emerald-soft transition">
                 <PenLine className="h-4 w-4" /> Become a Writer
               </button>
-            </div>
-          </Reveal>
-          <Reveal delay={0.25}>
-            <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+          </div>
+          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm animate-slide-up-in" style={{ animationDelay: "0.9s" }}>
               <Stat icon={<BookOpen className="h-4 w-4" />} value="4,200+" label="Stories Published" />
               <Stat icon={<PenLine className="h-4 w-4" />} value="340" label="Active Writers" />
               <Stat icon={<Users className="h-4 w-4" />} value="54" label="African Nations" />
-            </div>
-          </Reveal>
+          </div>
         </div>
 
         {/* Right — hero image card */}

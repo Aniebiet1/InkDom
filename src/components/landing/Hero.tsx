@@ -25,12 +25,18 @@ export const Hero = () => {
               fiction too vivid to forget.
           </p>
           <div className="mt-7 flex flex-wrap gap-3 animate-slide-up-in" style={{ animationDelay: "0.7s" }}>
-              <button className="inline-flex items-center gap-2 rounded-full bg-leaf text-leaf-foreground px-5 py-3 text-sm font-medium shadow-soft hover:brightness-110 transition">
+              <a
+                href="#stories"
+                className="inline-flex items-center gap-2 rounded-full bg-gold text-emerald-deep px-5 py-3 text-sm font-semibold shadow-soft hover:brightness-110 active:scale-95 transition animate-attention-pulse"
+              >
                 <BookOpen className="h-4 w-4" /> Start Reading Free
-              </button>
-              <button className="inline-flex items-center gap-2 rounded-full border border-gold/40 text-foreground px-5 py-3 text-sm font-medium hover:bg-emerald-soft transition">
+              </a>
+              <a
+                href="#signup"
+                className="inline-flex items-center gap-2 rounded-full border border-gold/40 text-foreground px-5 py-3 text-sm font-medium hover:bg-emerald-soft active:scale-95 transition"
+              >
                 <PenLine className="h-4 w-4" /> Become a Writer
-              </button>
+              </a>
           </div>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm animate-slide-up-in" style={{ animationDelay: "0.9s" }}>
               <Stat icon={<BookOpen className="h-4 w-4" />} value="4,200+" label="Stories Published" />

@@ -96,7 +96,7 @@ export const Stories = () => {
   }, [hint, focused, value]);
 
   return (
-    <section id="stories" className="bg-cream text-cream-foreground py-20 md:py-28 relative">
+    <section id="stories" className="bg-cream text-cream-foreground py-20 md:py-28 relative scroll-mt-20">
       {/* library wood-shelf vibe — subtle warm gradient */}
       <div className="container">
         <div className="flex items-end justify-between gap-6 mb-10">

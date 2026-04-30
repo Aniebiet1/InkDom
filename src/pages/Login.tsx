@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-reader.jpg";
+import authImg from "@/assets/auth-reader.jpg";
 import { Logo } from "@/components/landing/Logo";
 
 const Login = () => {
@@ -30,11 +30,12 @@ const Login = () => {
           className="flex-1 flex items-center"
         >
           <div className="w-full max-w-md mx-auto">
-            <h1 className="display text-4xl sm:text-5xl text-foreground">
-              Welcome back <span className="text-gold">👋</span>
+            <span className="eyebrow text-gold/80">Member access</span>
+            <h1 className="display text-4xl sm:text-5xl font-bold text-foreground mt-3 tracking-tight">
+              Welcome back.
             </h1>
-            <p className="mt-2 text-foreground/60 text-sm">
-              Log in to continue reading on <span className="text-gold font-medium">InkDom</span>.
+            <p className="mt-3 text-foreground/60 text-sm leading-relaxed">
+              Sign in to continue your chapter on InkDom.
             </p>
 
             <form
@@ -99,16 +100,16 @@ const Login = () => {
 
       {/* Right — image */}
       <aside className="hidden lg:block relative p-6">
-        <div className="relative h-full w-full rounded-3xl overflow-hidden shadow-card ring-1 ring-emerald-line/40">
-          <img src={heroImg} alt="A reader lost in an African novel" className="absolute inset-0 h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep/85 via-emerald-deep/30 to-transparent" />
+        <div className="relative h-full w-full rounded-3xl overflow-hidden shadow-card">
+          <img src={authImg} alt="A reader holding an e-reader" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep via-emerald-deep/40 to-transparent" />
           <div className="absolute bottom-0 inset-x-0 p-10 text-cream">
             <span className="eyebrow text-gold">The InkDom Library</span>
-            <h2 className="display text-3xl sm:text-4xl mt-3 leading-tight">
+            <h2 className="display text-3xl sm:text-4xl font-bold mt-3 leading-tight tracking-tight">
               Where Africa's <span className="text-gold">stories</span> live.
             </h2>
-            <p className="mt-3 text-cream/80 max-w-md text-sm">
-              Sign in to pick up where you left off — your bookmarks, highlights and reading playlists are waiting.
+            <p className="mt-3 text-cream/80 max-w-md text-sm leading-relaxed">
+              Pick up where you left off — your bookmarks, highlights and reading playlists are waiting.
             </p>
           </div>
         </div>

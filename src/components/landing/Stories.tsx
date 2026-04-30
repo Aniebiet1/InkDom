@@ -2,55 +2,63 @@ import { Heart, Bookmark, ArrowRight, ArrowLeft, Clock, Search } from "lucide-re
 import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import harmattan from "@/assets/story-harmattan.jpg";
-import niger from "@/assets/story-niger.jpg";
-import onitsha from "@/assets/story-onitsha.jpg";
-import sahara from "@/assets/story-sahara.jpg";
-import baobab from "@/assets/story-baobab.jpg";
-import lagos from "@/assets/story-lagos.jpg";
+import cabal from "@/assets/book-cabal.jpg";
+import africanLit from "@/assets/book-african-literature.jpg";
+import whenAManCries from "@/assets/book-when-a-man-cries.jpg";
+import parlourWife from "@/assets/book-parlour-wife.jpg";
+import girlBodyWater from "@/assets/book-girl-body-water.jpg";
+import marriageMonitoring from "@/assets/book-marriage-monitoring.jpg";
+import mamaCantRaise from "@/assets/book-mama-cant-raise.jpg";
 
 const stories = [
   {
-    img: harmattan, tag: "Trending", tagColor: "bg-gold text-emerald-deep",
-    genre: "Drama", time: "12 min read",
-    title: "Things We Lost in Harmattan",
-    excerpt: "When the dust storms come to Kaduna, Amaka must finally face what her father buried in the family compound.",
-    author: "Chioma Okafor", likes: "3.2k", saves: "980",
+    img: cabal, tag: "Trending", tagColor: "bg-gold text-emerald-deep",
+    genre: "Political Drama", time: "22 min read",
+    title: "The Cabal",
+    excerpt: "A nation's fate hangs in the hands of a few powerful men — and the silenced voices rising against them.",
+    author: "Odafe Atogun", likes: "4.6k", saves: "1.3k",
   },
   {
-    img: niger, tag: "Editor's pick", tagColor: "bg-leaf text-white",
-    genre: "Literary", time: "24 min read",
-    title: "Sons of the Niger",
-    excerpt: "Three brothers, one fishing boat, and a delta that no longer answers to the old gods.",
-    author: "Tunde Bowen", likes: "4.8k", saves: "1.4k",
+    img: africanLit, tag: "Editor's pick", tagColor: "bg-leaf text-white",
+    genre: "Literary Essays", time: "30 min read",
+    title: "African Literature",
+    excerpt: "Gender discourse, religious values, and the African worldview — a sweeping portrait of a continent's voice.",
+    author: "Safoura Salami-Boukari", likes: "3.1k", saves: "990",
   },
   {
-    img: onitsha, tag: "New voice", tagColor: "bg-tint-rose text-emerald-deep",
-    genre: "Romance", time: "18 min read",
-    title: "The Market Women of Onitsha",
-    excerpt: "In the heart of Main Market, a young Igbo widow rebuilds a life — one customer, one secret at a time.",
-    author: "Adaeze Nwosu", likes: "2.1k", saves: "760",
+    img: whenAManCries, tag: "New voice", tagColor: "bg-tint-rose text-emerald-deep",
+    genre: "Drama", time: "18 min read",
+    title: "When a Man Cries",
+    excerpt: "A township story of pride, fatherhood, and the moment a man finally lets the tears find their way home.",
+    author: "Siphiwo Mahala", likes: "2.4k", saves: "820",
   },
   {
-    img: sahara, tag: "Featured", tagColor: "bg-gold text-emerald-deep",
-    genre: "Historical", time: "16 min read",
-    title: "The Daughter of Saharan Wind",
-    excerpt: "Aisha returns to her grandmother's village in Sokoto to uncover a secret buried for three generations.",
-    author: "Naila Diallo", likes: "2.4k", saves: "880",
+    img: parlourWife, tag: "Featured", tagColor: "bg-gold text-emerald-deep",
+    genre: "Contemporary", time: "26 min read",
+    title: "The Parlour Wife",
+    excerpt: "Her place is in the home, but her heart yearns for freedom — a Lagos woman steps quietly into her own light.",
+    author: "Foluso Agbaje", likes: "5.2k", saves: "1.6k",
   },
   {
-    img: baobab, tag: "Folktale", tagColor: "bg-leaf text-white",
-    genre: "Fantasy", time: "20 min read",
-    title: "When the Baobab Spoke",
-    excerpt: "An old tree in Benue begins to whisper, and a village that forgot its songs must learn to listen again.",
-    author: "Bayo Bature", likes: "4.1k", saves: "1.2k",
+    img: girlBodyWater, tag: "Award winner", tagColor: "bg-leaf text-white",
+    genre: "Literary", time: "34 min read",
+    title: "A Girl Is a Body of Water",
+    excerpt: "Kirabo searches for the mother she has never known, weaving Ugandan myth, womanhood and belonging.",
+    author: "Jennifer Nansubuga Makumbi", likes: "6.0k", saves: "2.1k",
   },
   {
-    img: lagos, tag: "Hot read", tagColor: "bg-tint-rose text-emerald-deep",
-    genre: "Romance", time: "14 min read",
-    title: "Letters From Lagos",
-    excerpt: "Across Third Mainland Bridge, two strangers exchange letters — falling for words long before faces.",
-    author: "Funmi Adelaja", likes: "1.9k", saves: "640",
+    img: marriageMonitoring, tag: "Hot read", tagColor: "bg-tint-rose text-emerald-deep",
+    genre: "Romance · Comedy", time: "16 min read",
+    title: "The Marriage Monitoring Aunties' Association",
+    excerpt: "Five aunties, one stubborn niece, and a wedding deadline nobody asked for. Lagos love at full volume.",
+    author: "Ola Awonubi", likes: "3.8k", saves: "1.1k",
+  },
+  {
+    img: mamaCantRaise, tag: "Powerful", tagColor: "bg-gold text-emerald-deep",
+    genre: "Coming of Age", time: "20 min read",
+    title: "Mama Can't Raise No Man",
+    excerpt: "A boy raised by women learns what it really means to become a man — on his own terms, in his own time.",
+    author: "Robyn Travis", likes: "2.9k", saves: "940",
   },
 ];
 

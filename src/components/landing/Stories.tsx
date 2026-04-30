@@ -9,6 +9,10 @@ import parlourWife from "@/assets/book-parlour-wife.jpg";
 import girlBodyWater from "@/assets/book-girl-body-water.jpg";
 import marriageMonitoring from "@/assets/book-marriage-monitoring.jpg";
 import mamaCantRaise from "@/assets/book-mama-cant-raise.jpg";
+import toMyChildren from "@/assets/book-to-my-children.jpg";
+import blackRevolution from "@/assets/book-black-revolution.jpg";
+import waitingRoom from "@/assets/book-waiting-room.jpg";
+import nyokabi from "@/assets/book-nyokabi.jpg";
 
 const stories = [
   {
@@ -59,6 +63,34 @@ const stories = [
     title: "Mama Can't Raise No Man",
     excerpt: "A boy raised by women learns what it really means to become a man — on his own terms, in his own time.",
     author: "Robyn Travis", likes: "2.9k", saves: "940",
+  },
+  {
+    img: toMyChildren, tag: "Classic", tagColor: "bg-leaf text-white",
+    genre: "Memoir", time: "28 min read",
+    title: "To My Children's Children",
+    excerpt: "A grandmother's voice carries across generations — Xhosa wisdom, apartheid's shadow, and the hope she refuses to bury.",
+    author: "Sindiwe Magona", likes: "3.4k", saves: "1.0k",
+  },
+  {
+    img: blackRevolution, tag: "Must read", tagColor: "bg-gold text-emerald-deep",
+    genre: "History · Essays", time: "38 min read",
+    title: "The Black Revolution on Campus",
+    excerpt: "The students who refused silence — and the movement that reshaped a generation's idea of freedom.",
+    author: "Martha Biondi", likes: "2.7k", saves: "880",
+  },
+  {
+    img: waitingRoom, tag: "New voice", tagColor: "bg-tint-rose text-emerald-deep",
+    genre: "Contemporary", time: "24 min read",
+    title: "The Waiting Room",
+    excerpt: "Between prayer and patience, a Lagos woman learns what it costs — and what it gives — to keep on hoping.",
+    author: "Bolatito Adebayo", likes: "3.9k", saves: "1.2k",
+  },
+  {
+    img: nyokabi, tag: "Featured", tagColor: "bg-leaf text-white",
+    genre: "Literary Fiction", time: "32 min read",
+    title: "Nyokabi",
+    excerpt: "Torn between tradition and rebellion, a young Kikuyu woman dares to choose love on her own terms.",
+    author: "Wangui Turner", likes: "4.1k", saves: "1.4k",
   },
 ];
 

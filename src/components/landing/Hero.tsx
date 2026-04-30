@@ -1,6 +1,6 @@
 import { Play, BookOpen, PenLine, Users, ArrowDown, Quote } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-fire-book.jpg";
+import heroImg from "@/assets/hero-reader.jpg";
 import { Reveal } from "./Reveal";
 
 export const Hero = () => {
@@ -57,11 +57,13 @@ export const Hero = () => {
             >
               <img
                 src={heroImg}
-                alt="Reader holding a book of fire"
-                className="w-full h-[420px] md:h-[520px] object-cover"
-                width={1024}
-                height={1024}
+                alt="A young African woman lost in a novel"
+                className="w-full h-[420px] md:h-[520px] object-cover object-top"
+                loading="eager"
               />
+              {/* warm tone overlay so it blends with emerald palette */}
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep/55 via-emerald-deep/10 to-transparent mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,hsl(var(--gold)/0.18),transparent_55%)]" />
               <button className="absolute top-4 right-4 inline-flex items-center gap-1.5 rounded-full bg-background/70 backdrop-blur px-3 py-1.5 text-xs text-foreground border border-white/10">
                 <Play className="h-3 w-3 fill-current" /> 30 second intro
               </button>

@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Eye, EyeOff, Mail, Lock, User, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-reader.jpg";
+import authImg from "@/assets/auth-reader.jpg";
 import { Logo } from "@/components/landing/Logo";
 
 const SignUp = () => {
@@ -29,11 +29,12 @@ const SignUp = () => {
           className="flex-1 flex items-center"
         >
           <div className="w-full max-w-md mx-auto">
-            <h1 className="display text-4xl sm:text-5xl text-foreground">
-              Join <span className="text-gold">InkDom</span> ✨
+            <span className="eyebrow text-gold/80">Create your account</span>
+            <h1 className="display text-4xl sm:text-5xl font-bold text-foreground mt-3 tracking-tight">
+              Join <span className="text-gold">InkDom</span>.
             </h1>
-            <p className="mt-2 text-foreground/60 text-sm">
-              Create an account to read, save and write African stories.
+            <p className="mt-3 text-foreground/60 text-sm leading-relaxed">
+              An account to read, save and write African stories.
             </p>
 
             <form onSubmit={(e) => e.preventDefault()} className="mt-8 space-y-5">
@@ -84,15 +85,15 @@ const SignUp = () => {
       </section>
 
       <aside className="hidden lg:block relative p-6">
-        <div className="relative h-full w-full rounded-3xl overflow-hidden shadow-card ring-1 ring-emerald-line/40">
-          <img src={heroImg} alt="A reader lost in an African novel" className="absolute inset-0 h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep/85 via-emerald-deep/30 to-transparent" />
+        <div className="relative h-full w-full rounded-3xl overflow-hidden shadow-card">
+          <img src={authImg} alt="A reader with an e-reader outdoors" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep via-emerald-deep/40 to-transparent" />
           <div className="absolute bottom-0 inset-x-0 p-10 text-cream">
             <span className="eyebrow text-gold">Begin your chapter</span>
-            <h2 className="display text-3xl sm:text-4xl mt-3 leading-tight">
+            <h2 className="display text-3xl sm:text-4xl font-bold mt-3 leading-tight tracking-tight">
               Every great <span className="text-gold">reader</span> starts here.
             </h2>
-            <p className="mt-3 text-cream/80 max-w-md text-sm">
+            <p className="mt-3 text-cream/80 max-w-md text-sm leading-relaxed">
               Join thousands discovering African literature — from Lagos love letters to Saharan folktales.
             </p>
           </div>

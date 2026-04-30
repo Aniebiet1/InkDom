@@ -1,5 +1,6 @@
 import { Compass, BookOpen, Users, Menu, X, LogIn, HelpCircle } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
 const links = [
@@ -22,15 +23,15 @@ export const Navbar = () => {
               <Icon className="h-4 w-4" /> {label}
             </a>
           ))}
-          <a href="#login" className="flex items-center gap-1.5 hover:text-gold transition-colors">
+          <Link to="/login" className="flex items-center gap-1.5 hover:text-gold transition-colors">
             <LogIn className="h-4 w-4" /> Login
-          </a>
-          <a
-            href="#signup"
+          </Link>
+          <Link
+            to="/signup"
             className="rounded-full bg-leaf text-leaf-foreground px-4 py-2 text-sm font-medium hover:brightness-110 active:scale-95 transition"
           >
             Sign Up
-          </a>
+          </Link>
         </nav>
         <button
           className="md:hidden text-foreground p-2 active:scale-90 transition"
@@ -53,20 +54,20 @@ export const Navbar = () => {
                 <Icon className="h-4 w-4 text-gold" /> {label}
               </a>
             ))}
-            <a
-              href="#login"
+            <Link
+              to="/login"
               onClick={close}
               className="flex items-center gap-2 py-3 px-3 rounded-lg active:bg-emerald-soft/40 hover:bg-emerald-soft/30 hover:text-gold transition-colors"
             >
               <LogIn className="h-4 w-4 text-gold" /> Login
-            </a>
-            <a
-              href="#signup"
+            </Link>
+            <Link
+              to="/signup"
               onClick={close}
               className="mt-2 flex items-center justify-center gap-2 rounded-full bg-leaf text-leaf-foreground py-2.5 font-medium active:scale-95 hover:brightness-110 transition"
             >
               Sign Up
-            </a>
+            </Link>
           </div>
         </div>
       )}

@@ -1,4 +1,5 @@
 import { PenLine, BookOpen, Feather } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Reveal } from "./Reveal";
 
 export const CTA = () => (
@@ -17,9 +18,9 @@ export const CTA = () => (
       </Reveal>
       <Reveal delay={0.15}>
         <div className="mt-8 flex flex-wrap gap-3 justify-center">
-          <button className="inline-flex items-center gap-2 rounded-full bg-leaf text-leaf-foreground px-5 py-3 text-sm font-medium hover:brightness-110 transition shadow-soft">
+          <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-leaf text-leaf-foreground px-5 py-3 text-sm font-medium hover:brightness-110 transition shadow-soft">
             <PenLine className="h-4 w-4" /> Begin Writing
-          </button>
+          </Link>
           <button className="inline-flex items-center gap-2 rounded-full bg-cream text-emerald-deep px-5 py-3 text-sm font-medium hover:brightness-95 transition">
             <BookOpen className="h-4 w-4" /> Read our next feed
           </button>

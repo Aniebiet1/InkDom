@@ -1,5 +1,5 @@
 import { Compass, BookOpen, Users, Menu, X, LogIn, HelpCircle } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
@@ -12,12 +12,23 @@ const links = [
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const close = () => setOpen(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="absolute top-0 inset-x-0 z-30">
-      <div className="container flex items-center justify-between py-5">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+      scrolled ? "bg-black/70 backdrop-blur-md shadow-md" : "bg-transparent"
+    } -translate-y-0.5 md:-translate-y-1`} style={{ WebkitBackfaceVisibility: 'hidden' }}>
+      <div className="container flex items-center justify-between py-0.5 md:py-1">
         <Logo />
-        <nav className="hidden md:flex items-center gap-7 text-sm text-foreground/80">
+        <nav className="hidden md:flex items-center gap-2.5 lg:gap-3.5 text-sm text-foreground/80">
           {links.map(({ label, icon: Icon, href }) => (
             <a key={label} href={href} className="flex items-center gap-1.5 hover:text-gold transition-colors">
               <Icon className="h-4 w-4" /> {label}
@@ -28,7 +39,7 @@ export const Navbar = () => {
           </Link>
           <Link
             to="/signup"
-            className="rounded-full bg-leaf text-leaf-foreground px-4 py-2 text-sm font-medium hover:brightness-110 active:scale-95 transition"
+            className="rounded-full bg-leaf text-leaf-foreground px-2.5 py-1 text-sm font-medium hover:brightness-110 active:scale-95 transition"
           >
             Sign Up
           </Link>
